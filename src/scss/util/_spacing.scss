@@ -1,0 +1,118 @@
+// -----------------------------------------------------------------------------
+// _spacing.scss
+// Adds margin & padding modifiers to each mediaquery & breakpoint.
+// -----------------------------------------------------------------------------
+
+// Util Class
+// ==========================================================================
+
+.margin {
+	$self: &;
+	margin-bottom: $margin;
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+
+	&-none {
+		margin-bottom: 0 !important;
+	}
+
+	&-tiny {
+		margin-bottom: $margin-tiny;
+	}
+
+	&-small {
+		margin-bottom: $margin-small;
+	}
+
+	&-large {
+		margin-bottom: $margin-large;
+	}
+
+	&-title {
+		margin-bottom: $margin-title;
+	}
+
+	&-top {
+		margin-top: $margin;
+
+		#{$self}-tiny {
+			margin-top: $margin-tiny;
+		}
+
+		#{$self}-small {
+			margin-top: $margin-small;
+		}
+
+		#{$self}-large {
+			margin-top: $margin-large;
+		}
+
+		#{$self}-title {
+			margin-top: $margin-title;
+		}
+	}
+}
+
+// Properties
+// ==========================================================================
+
+@each $modifier, $breakpoint in $grid-properties {
+	@each $prop, $abbrev in (margin: m, padding: p) {
+		@include create-mediaquery($breakpoint) {
+			@each $size, $length in $spacing-properties {
+				.#{$abbrev}#{$modifier}-#{$size} {
+					#{$prop}: $length !important;
+				}
+				.#{$abbrev}t#{$modifier}-#{$size},
+				.#{$abbrev}y#{$modifier}-#{$size} {
+					#{$prop}-top: $length !important;
+				}
+				.#{$abbrev}r#{$modifier}-#{$size},
+				.#{$abbrev}x#{$modifier}-#{$size} {
+					#{$prop}-right: $length !important;
+				}
+				.#{$abbrev}b#{$modifier}-#{$size},
+				.#{$abbrev}y#{$modifier}-#{$size} {
+					#{$prop}-bottom: $length !important;
+				}
+				.#{$abbrev}l#{$modifier}-#{$size},
+				.#{$abbrev}x#{$modifier}-#{$size} {
+					#{$prop}-left: $length !important;
+				}
+			}
+		}
+	}
+}
+
+// Responsive
+// ==========================================================================
+
+.p {
+	@include media-tab-down {
+		&-no-mob-down {
+			padding-bottom: 0 !important;
+		}
+	}
+
+	@include media-desk-down {
+		&-no-tab-down {
+			padding-bottom: 0 !important;
+		}
+	}
+}
+
+.m {
+	@include media-tab-down {
+		&-no-mob-down {
+			margin-bottom: 0 !important;
+		}
+	}
+
+	@include media-desk-down {
+		&-no-tab-down {
+			margin-bottom: 0 !important;
+		}
+	}
+}

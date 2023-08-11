@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// _base.scss
+// This file contains very basic styles to reset document.
+// -----------------------------------------------------------------------------
+
+html {
+	scroll-behavior: initial;
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	font-family: $font;
+	font-size: 1rem;
+	line-height: 1.6;
+	font-kerning: normal;
+	-webkit-font-smoothing: antialiased; // sass-lint:disable-line  no-vendor-prefixes
+	-webkit-tap-highlight-color: transparent; // sass-lint:disable-line  no-vendor-prefixes
+}
+
+.no-js * {
+	transition: none !important;
+}
+
+@include touch {
+	scroll-behavior: smooth;
+
+	* {
+		scroll-behavior: smooth !important;
+	}
+}
+
+body {
+	background-color: $black;
+}
+
+main {
+	flex-grow: 2;
+}
+
+.content-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+.no-js {
+	.js-hide {
+		display: none !important;
+	}
+
+	.lazy {
+		display: none !important;
+	}
+}

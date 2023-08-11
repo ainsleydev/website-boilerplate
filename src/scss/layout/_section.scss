@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// _section.scss
+// This file contains styles that are specific to the global sections.
+// -----------------------------------------------------------------------------
+
+.section {
+	$self: &;
+	position: relative;
+
+	&-padding {
+		padding-top: $section-padding;
+		padding-bottom: $section-padding;
+
+		&-small {
+			padding-top: $section-padding-small;
+			padding-bottom: $section-padding-small;
+		}
+
+		&-large {
+			padding-top: $section-padding-large;
+			padding-bottom: $section-padding-large;
+		}
+
+		&-bottom {
+			padding-top: 0 !important;
+		}
+
+		&-top {
+			padding-bottom: 0 !important;
+		}
+	}
+
+	&-margin {
+		margin-top: $section-padding;
+		margin-bottom: $section-padding;
+
+		&-small {
+			margin-top: $section-padding-small;
+			margin-bottom: $section-padding-small;
+		}
+
+		&-large {
+			margin-top: $section-padding-large;
+			margin-bottom: $section-padding-large;
+		}
+
+		&-bottom {
+			margin-top: 0 !important;
+		}
+
+		&-top {
+			margin-bottom: 0 !important;
+		}
+	}
+
+	&-hide-overflow {
+		overflow-x: hidden;
+		overflow-x: clip;
+	}
+}

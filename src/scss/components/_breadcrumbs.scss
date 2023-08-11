@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// _breadcrumbs.scss
+// This file contains all styles related to the breadcrumb component.
+// -----------------------------------------------------------------------------
+
+.breadcrumbs {
+	$self: &;
+	position: relative;
+	overflow: clip;
+
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	&-list {
+		width: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+		margin-bottom: 0;
+		overflow-x: scroll;
+	}
+
+	&-item {
+		display: flex;
+		align-items: center;
+		padding: 6px 0;
+	}
+
+	&-link {
+		white-space: nowrap;
+		font-size: $breadcrumbs-link-font-size;
+		font-weight: 500;
+		color: colour('paragraph');
+	}
+
+	// Tablet
+	// =========================================================================
+
+	@include media-tab {
+		&-item {
+			padding: 0;
+		}
+
+		&-link {
+			max-width: $breadcrumbs-max-width;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}

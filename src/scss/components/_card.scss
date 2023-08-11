@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// _card.scss
+// This file contains all styles related to the card component.
+// -----------------------------------------------------------------------------
+
+$card-margin-bottom: 3.75rem;
+
+.card {
+	$self: &;
+
+	position: relative;
+	display: block;
+	text-decoration: none;
+	margin-bottom: $card-margin-bottom;
+	user-select: none;
+}

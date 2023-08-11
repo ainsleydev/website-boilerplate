@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// _form.scss
+// This file contains all styles related to the forms of the site.
+// -----------------------------------------------------------------------------
+
+.form {
+	$self: &;
+	position: relative;
+	display: block;
+
+
+	// Placeholder resets
+	::placeholder {
+		// Chrome, Firefox, Opera, Safari 10.1+
+		color: $copy;
+		opacity: 1; /* Firefox */
+	}
+
+	:-ms-input-placeholder {
+		// Internet Explorer 10-11
+		color: $copy;
+	}
+
+	::-ms-input-placeholder {
+		// Microsoft Edge
+		color: $copy;
+	}
+}

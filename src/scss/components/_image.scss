@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// _image.scss
+// This file contains all styles related to the image component.
+// -----------------------------------------------------------------------------
+
+.image {
+	$self: &;
+	position: relative;
+	display: block;
+	height: auto;
+
+	img,
+	source {
+		width: 100%;
+		height: auto;
+	}
+}
