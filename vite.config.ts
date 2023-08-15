@@ -2,7 +2,6 @@
  * Vite config for bundling.
  */
 const path = require("path");
-const scssPlugin = require("vite-plugin-sass");
 
 /** @type {import('vite').UserConfig} */
 export default {
@@ -11,7 +10,32 @@ export default {
 	build: {
 		outDir: path.resolve(__dirname, 'dist'),
 		emptyOutDir: true,
+		manifest: true,
+		rollupOptions: {
+			input: [
+				path.resolve(__dirname, 'src/scss/app.scss'),
+				path.resolve(__dirname, 'src/js/app.ts'),
+			],
+			output: {
+				dir: path.resolve(__dirname, 'dist'),
+			},
+		}
 	},
-	plugins: [scssPlugin()],
 	assetsInclude: ["favicon.svg", "favicon.ico", "public/*"],
+	resolve: {
+		alias: {
+			'@': path.resolve(__dirname, 'src'),
+		}
+	},
+	// css: {
+	// 	preprocessorOptions: {
+	// 		scss: {
+	// 			additionalData: `
+	// 			@import "@/scss/abstracts/_functions.scss";
+	// 			@import "@/scss/abstracts/_mixins.scss";
+	// 			@import "@/scss/abstracts/_variables.scss";
+	// 			`
+	// 		}
+	// 	}
+	// },
 };

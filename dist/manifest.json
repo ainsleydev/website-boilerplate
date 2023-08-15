@@ -1,0 +1,15 @@
+{
+  "js/app.ts": {
+    "css": [
+      "assets/app-c1a3d0bd.css"
+    ],
+    "file": "assets/app-b04c0252.js",
+    "isEntry": true,
+    "src": "js/app.ts"
+  },
+  "scss/app.scss": {
+    "file": "assets/app-c1a3d0bd.css",
+    "isEntry": true,
+    "src": "scss/app.scss"
+  }
+}

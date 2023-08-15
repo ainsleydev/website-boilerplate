@@ -69,7 +69,7 @@ $display-properties: (none, inline, inline-block, block, flex, inline-flex, tabl
 
 $white: #ffffff;
 $black: #0a0a0a;
-$orange: #ff5043;
+$primary: #ff5043;
 $blue: #70cbce;
 $copy: $black;
 $copy-dark-bg: #9a9a9a; // Fossil
@@ -84,13 +84,6 @@ $mark: rgba($white, $alpha-standard);
 // Color palette
 $palette: (
 	white: $white,
-	black: $black,
-	orange: $orange,
-	blue: $blue,
-	copy: $copy,
-	grey-dark: $grey-dark,
-	grey-light: $grey-light,
-	off-white: $off-white,
 );
 
 // Color attributes
@@ -222,12 +215,4 @@ $social-icon-height-mob: 20px;
 	--colour-foreground: #{$white};
 	--colour-black: #{$black};
 	--colour-white: #{$white};
-	--colour-orange: #{$orange};
-	--colour-blue: #{$blue};
-	--colour-copy: #{$copy};
-	--colour-copy-dark: #{$copy-dark-bg};
-	--colour-copy-light: #{$copy-light-bg};
-	--colour-off-white: #{$off-white};
-	--colour-paragraph: #{$copy-dark-bg};
-	--colour-list: #{$white};
 }
