@@ -106,7 +106,7 @@
 
 		&-text {
 			@include h6;
-			color: colour('foreground');
+			color: colour("foreground");
 			margin-right: 8px;
 			margin-bottom: 0;
 			font-size: 0.9rem;
@@ -199,13 +199,15 @@
 
 			// Arrow
 			&::after {
-				content: url('/images/icons/nav-arrow.svg');
+				content: url("/images/icons/nav-arrow.svg");
 				position: absolute;
 				top: 50%;
 				left: 0;
 				transform: translate(-100%, -50%);
 				opacity: 0;
-				transition: transform $arrow-transition, opacity $arrow-transition;
+				transition:
+					transform $arrow-transition,
+					opacity $arrow-transition;
 				will-change: transform, opacity;
 			}
 

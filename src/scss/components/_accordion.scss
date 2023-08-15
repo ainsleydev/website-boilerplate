@@ -19,12 +19,12 @@
 		outline: none;
 
 		::marker {
-			content: '';
+			content: "";
 			display: none;
 		}
 
 		&::after {
-			content: '';
+			content: "";
 		}
 
 		&:first-of-type #{$self}-header {

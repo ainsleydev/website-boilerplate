@@ -41,7 +41,7 @@ h6,
 p {
 	position: relative;
 	margin: 0;
-	color: colour('foreground');
+	color: colour("foreground");
 }
 
 // Headings
@@ -57,7 +57,7 @@ h4,
 .heading-4,
 h5 {
 	display: block;
-	color: colour('foreground');
+	color: colour("foreground");
 	font-weight: bold;
 }
 
@@ -141,7 +141,7 @@ h5,
 
 @mixin h6 {
 	display: block;
-	color: colour('paragraph');
+	color: colour("paragraph");
 	font-size: 0.84rem;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -159,7 +159,7 @@ h6,
 // =========================================================================
 
 p {
-	color: colour('paragraph');
+	color: colour("paragraph");
 	font-size: $text-paragraph-size;
 	margin-bottom: 1rem;
 	line-height: $text-lead-line-height;
@@ -184,7 +184,7 @@ p {
 
 a {
 	font-size: $text-paragraph-size;
-	color: colour('foreground');
+	color: colour("foreground");
 	font-weight: bold;
 	text-decoration: underline;
 
@@ -236,9 +236,9 @@ strong {
 
 .number {
 	display: block;
-	font-family: 'Times New Roman', serif;
+	font-family: "Times New Roman", serif;
 	font-size: 7.5rem;
-	color: colour('foreground');
+	color: colour("foreground");
 	letter-spacing: -4px;
 	font-style: italic;
 	line-height: 1;
@@ -256,7 +256,7 @@ strong {
 }
 
 .type-heading {
-	color: colour('paragraph');
+	color: colour("paragraph");
 	font-weight: normal;
 	margin-bottom: $margin;
 
