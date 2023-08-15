@@ -31,10 +31,14 @@
 		}
 	},
 	"lint-staged": {
-		"*.js": [
-			"npm run lint",
-			"npm run format",
-			"git add"
+		"*.{ts,scss,js}": [
+			"prettier --write"
+		],
+		"*.ts": [
+			"eslint --fix"
+		],
+		"*.go": [
+			"gofmt -w"
 		]
 	}
 }
