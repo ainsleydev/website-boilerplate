@@ -31,11 +31,11 @@
 		}
 	},
 	"lint-staged": {
-		"src/*.{ts,scss,js}": [
-			"prettier --write ."
+		"src/**/*.{scss}": [
+			"prettier --write"
 		],
-		"src/*.ts": [
-			"eslint . --fix"
+		"src/**/*.{ts,js}": [
+			"eslint --fix"
 		]
 	}
 }
