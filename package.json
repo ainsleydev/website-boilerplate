@@ -3,19 +3,38 @@
 	"version": "1.0.0",
 	"description": "Website boilerplate for bootstrapping websites built by ainsley.dev",
 	"entrypoint": "src/js/app.ts",
+	"author": "ainsley.dev LTD",
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build --emptyOutDir",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"format": "prettier --write .",
+		"lint": "eslint . --fix"
 	},
 	"devDependencies": {
 		"@types/node": "^20.5.0",
-		"prettier": "3.0.1",
+		"eslint": "^8.47.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^14.0.0",
+		"prettier": "^3.0.1",
 		"sass": "^1.65.1",
 		"typescript": "^5.1.6",
 		"vite": "^4.4.9",
 		"vite-plugin-sass": "^0.1.0"
 	},
-	"author": "ainsley.dev LTD",
-	"license": "MIT"
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.js": [
+			"npm run lint",
+			"npm run format",
+			"git add"
+		]
+	}
 }
