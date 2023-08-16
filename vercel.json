@@ -1,0 +1,40 @@
+{
+	"outputDirectory": "dist",
+	"devCommand": "parcel serve src/templates/*.html --port $PORT",
+	"cleanUrls": false,
+	"public": false,
+	"regions": ["lhr1"],
+	"trailingSlash": false,
+	"git": {
+		"deploymentEnabled": {
+			"dev": false
+		}
+	},
+	"headers": [
+		{
+			"source": "/(.*)",
+			"headers": [
+				{
+					"key": "Content-Security-Policy",
+					"value": "default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; "
+				},
+				{
+					"key": "X-Content-Type-Options",
+					"value": "nosniff"
+				},
+				{
+					"key": "X-Frame-Options",
+					"value": "SAMEORIGIN"
+				},
+				{
+					"key": "X-XSS-Protection",
+					"value": "1; mode=block"
+				},
+				{
+					"key": "Referrer-Policy",
+					"value": "no-referrer-when-downgrade"
+				}
+			]
+		}
+	]
+}

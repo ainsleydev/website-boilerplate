@@ -39,6 +39,7 @@ TEST*.xml
 # Bundlers
 dist
 .cache
+.parcel-cache
 
 # Credentials
 .env
@@ -47,3 +48,4 @@ dist
 # Coverage
 coverage.out
 ./coverage.out
+.vercel

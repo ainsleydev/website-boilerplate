@@ -1,10 +1,14 @@
 {
     "plugins": {
-        "posthtml-include": {
-            "root": "./src/templates"
-        },
 		"posthtml-extend": {
-			"root": "./src/templates"
-		}
+			"root": "./src/templates",
+			"strict": false,
+		},
+		"posthtml-modules": {
+        	"root": "./src/templates"
+        },
+		"posthtml-expressions": {
+        	locals: {}
+        }
     }
 }
