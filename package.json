@@ -11,14 +11,16 @@
 		"preview": "vite preview",
 		"format": "prettier --write .",
 		"lint": "eslint . --fix",
-		"image": "npx bin/images.ts"
+		"husky": "husky install && husky set .husky/pre-commit 'npx lint-staged' && git add .husky/pre-commit",
+		"image": "npx bin/images.ts",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@types/node": "^20.5.0",
 		"eslint": "^8.47.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-prettier": "^5.0.0",
-		"husky": "^4.3.8",
+		"husky": "^8.0.0",
 		"lint-staged": "^14.0.0",
 		"prettier": "^3.0.1",
 		"sass": "^1.65.1",
