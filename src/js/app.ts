@@ -1,4 +1,4 @@
 // Import our custom CSS
-import "../scss/app.scss";
+import '../scss/app.scss';
 
-alert("hello");
+alert('hello');

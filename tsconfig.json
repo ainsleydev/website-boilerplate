@@ -19,5 +19,15 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true
 	},
-	"include": ["src"]
+	"include": ["src"],
+	"types": [
+		"node"
+	],
+	"typeRoots": [
+		"./node_modules/@types"
+	],
+	"paths": {
+		"*": ["types/*.d.ts"]
+	},
+	"$schema": "https://json.schemastore.org/tsconfig"
 }

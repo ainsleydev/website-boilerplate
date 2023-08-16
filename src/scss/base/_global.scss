@@ -26,10 +26,6 @@ body {
 	-webkit-tap-highlight-color: transparent; // sass-lint:disable-line  no-vendor-prefixes
 }
 
-.no-js * {
-	transition: none !important;
-}
-
 @include touch {
 	scroll-behavior: smooth;
 
@@ -66,5 +62,9 @@ main {
 
 	.lazy {
 		display: none !important;
+	}
+
+	* {
+		transition: none !important;
 	}
 }

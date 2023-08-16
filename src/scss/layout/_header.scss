@@ -5,7 +5,6 @@
 
 .header {
 	$self: &;
-
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -31,7 +30,7 @@
 	&-scrolled {
 		//background-color: $header-scrolled-bg-color;
 		box-shadow:
-			0 3px 6px rgba(0, 0, 0, 0.1),
-			0 3px 6px rgba(0, 0, 0, 0.23);
+			0 3px 6px rgba(0, 0, 0, 10%),
+			0 3px 6px rgba(0, 0, 0, 23%);
 	}
 }

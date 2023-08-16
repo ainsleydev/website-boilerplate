@@ -1,1 +1,1 @@
-/* empty css            */alert("hello");
+/* empty css            */ alert('hello');

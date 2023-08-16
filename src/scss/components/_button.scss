@@ -7,7 +7,6 @@ $button-padding: 14px 26px;
 
 .btn {
 	$self: &;
-
 	position: relative;
 	display: inline-flex;
 	justify-content: center;
@@ -28,11 +27,11 @@ $button-padding: 14px 26px;
 		pointer-events: none;
 		color: transparent !important;
 
-		&:after {
-			content: "";
+		&::after {
+			content: '';
 			width: 18px;
 			height: 18px;
-			border: 2px solid rgba(0, 0, 0, 0.5);
+			border: 2px solid rgba(0, 0, 0, 50%);
 			border-right-color: transparent !important;
 			border-radius: 50%;
 			display: inline-block;
@@ -51,6 +50,7 @@ $button-padding: 14px 26px;
 			0% {
 				transform: rotate(0deg);
 			}
+
 			100% {
 				transform: rotate(360deg);
 			}

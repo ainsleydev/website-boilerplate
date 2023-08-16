@@ -3,7 +3,7 @@
 // This file contains all mixin's for use with scss files.
 // -----------------------------------------------------------------------------
 
-@use "sass:math";
+@use 'sass:math';
 
 // Breakpoint Mixins
 // ==========================================================================
@@ -112,7 +112,7 @@
 // ==========================================================================
 
 @mixin media-small-phones {
-	@media (max-width: 350px) {
+	@media (width <= 350px) {
 		@content;
 	}
 }
@@ -124,7 +124,7 @@
 /// @param {Number} $pxValue - Pixel amount to convert
 /// @param {String} $property [font-size] - Property to convert
 /// @param {Number} $standard-size - Initial base rem size
-@mixin px-to-rem($pxValue, $property: "font-size", $standard-size: 16) {
+@mixin px-to-rem($pxValue, $property: 'font-size', $standard-size: 16) {
 	#{$property}: $pxValue + px;
 	#{$property}: $pxValue / å$standard-size + rem;
 }
@@ -211,22 +211,23 @@
 
 // IE11 and Edge
 @mixin ie11andedge {
-	@media screen and (-webkit-min-device-pixel-ratio: 0) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-		/* stylelint-disable media-feature-name-no-vendor-prefix */
+	// stylelint-disable-next-line media-feature-name-no-unknown
+	@media screen and (min-device-pixel-ratio: 0) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 		@content;
 	}
 }
 
 // Chrome
 @mixin firefox {
-	@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+	// stylelint-disable-next-line media-feature-name-no-unknown
+	@media screen and (min-device-pixel-ratio: 0) and (resolution >= 0.001dpcm) {
 		@content;
 	}
 }
 
 // Safari
 @mixin safari {
-	@media not all and (min-resolution: 0.001dpcm) {
+	@media not all and (resolution >= 0.001dpcm) {
 		@supports (-webkit-appearance: none) {
 			@content;
 		}
