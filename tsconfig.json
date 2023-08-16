@@ -1,25 +1,20 @@
 {
 	"compilerOptions": {
-		"target": "ES2020",
-		"useDefineForClassFields": true,
-		"module": "ESNext",
-		"lib": ["ES2020", "DOM", "DOM.Iterable"],
-		"skipLibCheck": true,
-
-		/* Bundler mode */
-		"moduleResolution": "bundler",
-		"allowImportingTsExtensions": true,
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"noEmit": true,
-
-		/* Linting */
+		"target": "ES2015",
+		"module": "commonjs",
 		"strict": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitAny": false,
+		"noImplicitReturns": false,
+		"strictPropertyInitialization": false,
+		"lib": [
+			"es2016",
+			"dom",
+			"dom.iterable"
+		]
 	},
-	"include": ["src"],
 	"types": [
 		"node"
 	],
@@ -29,5 +24,6 @@
 	"paths": {
 		"*": ["types/*.d.ts"]
 	},
-	"$schema": "https://json.schemastore.org/tsconfig"
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Recommended"
 }

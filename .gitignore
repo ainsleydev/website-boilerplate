@@ -36,6 +36,10 @@ TEST*.xml
 *.exe
 *.war
 
+# Bundlers
+dist
+.cache
+
 # Credentials
 .env
 /.env

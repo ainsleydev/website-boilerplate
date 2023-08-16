@@ -164,7 +164,7 @@
 // ==========================================================================
 
 @function strip-unit($value) {
-	@return $value / ($value * 0 + 1);
+	@return math.div($value, $value * 0 + 1);
 }
 
 // Usage:
@@ -267,7 +267,7 @@
 
 		@for $i from 1 through $grid-columns {
 			.col#{$modifier}-#{$i} {
-				width: (100 / ($grid-columns / $i)) * 1%;
+				width: calc(100 / ($grid-columns / $i));
 			}
 		}
 
@@ -278,7 +278,7 @@
 
 		@for $i from 1 through $grid-columns {
 			.offset#{$modifier}-#{$i} {
-				margin-left: (100 / ($grid-columns / $i)) * 1%;
+				margin-left: calc($i * 5 / 100);
 			}
 		}
 	}

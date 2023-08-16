@@ -1,0 +1,12 @@
+<extends src="base.html">
+	<block name="content">
+		<include src="components/button.html"></include>
+		<h2>Home</h2>
+		<picture>
+			<source srcset="../images/test.png?as=avif&width=800" type="image/avif" />
+			<source srcset="../images/test.png?as=webp&width=800" type="image/webp" />
+			<source srcset="../images/test.png?width=800" type="image/jpeg" />
+			<img src="../images/test.png?width=200" alt="test image" />
+		</picture>
+	</block>
+</extends>

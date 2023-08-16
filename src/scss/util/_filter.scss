@@ -8,6 +8,6 @@
 
 @for $i from 0 through 20 {
 	.brightness-#{$i * 5} {
-		filter: brightness(#{$i * 5 / 100});
+		filter: brightness(calc($i * 5 / 100));
 	}
 }
